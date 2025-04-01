@@ -1,0 +1,94 @@
+  GNU nano 7.2                                          a6.c *                                                  
+#include <stdio.h>
+
+int getdig()
+{
+  int dig;
+  dig = getchar() - '0';
+  if (dig < 0) {
+    // o caractere digitado é menor que '0', ignora e retorna o valor da função que
+    //   lê um dígito válido
+    return getdig();
+  }
+  if (dig > 9) {
+    return getdig();
+  }
+  // o caractere digitado era um dígito válido!
+  return dig;
+}
+
+int get2dig()
+{
+  return getdig() * 10 + getdig();
+}
+
+int getnum()
+{
+  return get2dig() * 10 + getdig();
+}
+
+void putnum(int num)
+{
+  if (num < 0) {
+    putchar('-');
+    num = -num;
+  }
+  if (num >= 10) {
+    putnum(num / 10);
+  }
+  putchar(num % 10 + '0');
+}
+
+int calc_custo(int cent_por_litro, int hm_por_litro, int dist_km){
+        int litros;
+        int custo_total;
+
+        putnum(cent_por_litro);
+        putnum(hm_por_litro);
+        putnum(dist_km);
+
+        litros = dist_km * 10 / hm_por_litro;
+        putnum(litros);
+putchar("\n");
+        custo_total = litros * cent_por_litro / 100;
+        putnum(custo_total);
+        putchar("\n");
+
+        return custo_total;
+}
+
+int main1(){
+        int cent_por_litro;
+        int hm_por_litro;
+        int dist_km;
+
+        puts("Calculo de consumo");
+        puts("digite o custo do litro de gasolina em centavos");
+        cent_por_litro = getnum();
+        puts("Digite o consumo em hm/1");
+        hm_por_litro = getnum();
+        puts("digite a distancia em km");
+        dist_km = getnum();
+
+        int reais_por_viagem;
+
+        reais_por_viagem = calc_custo(cent_por_litro, hm_por_litro, dist_km);
+
+        puts("0 custo total da gasolina, em reais, é");
+        putnum(reais_por_viagem);
+}
+
+int c_pra_f(int c)
+{
+        int f;
+
+        f = c * 9 /5 + 32;
+
+        return f;
+int main (){
+        int celsius, fahr;
+
+        puts("Digite a temperatura em celsius");
+        celsius = getnum();
+        fahr = c_pra_f(celsius);
+
