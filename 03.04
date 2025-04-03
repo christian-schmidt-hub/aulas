@@ -1,5 +1,16 @@
 printf; e scanf;
+PRINTF PARA CHAR = %c
+short = %d %c
+para int = %d
+long = %ld
+long long = %lld
+float = %f
+double = %lf
+long double = %Lf
 
+SCANF is the same
+short = %hd
+char = %c %hhd
 --numeros inteiros(int)--
 
 8 digitos binarios = 
@@ -7,10 +18,10 @@ printf; e scanf;
 2 bits = 4 valores diferentes
 3 bits = 8 valores
 n bits = 2 elevado a n
-char - 8 bits = 2 elevdo a 8 = 256 valores
+* char - 8 bits = 2 elevdo a 8 = 256 valores
 
 short - 2 bytes = 16bits = 65536 valores
-int - 4 bytes = 32bits = 4bilhoes
+* int - 4 bytes = 32bits = 4bilhoes
 long - 64 bits
 long long - 128 bits
 
@@ -19,7 +30,7 @@ signed ou unsigned
 
 --Pontos flutuantes--
 
-float 32 bits
+* float 32 bits - conversao de float para int (inteiro)
 double 64
 long double 128
 numero 0 é especial = pois nao possui nenhum bit 1
