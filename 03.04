@@ -1,1 +1,32 @@
 printf; e scanf;
+
+--numeros inteiros(int)--
+
+8 digitos binarios = 
+1 bit = 2 valores 2 ou 1
+2 bits = 4 valores diferentes
+3 bits = 8 valores
+n bits = 2 elevado a n
+char - 8 bits = 2 elevdo a 8 = 256 valores
+
+short - 2 bytes = 16bits = 65536 valores
+int - 4 bytes = 32bits = 4bilhoes
+long - 64 bits
+long long - 128 bits
+
+signed ou unsigned
+--FIM--
+
+--Pontos flutuantes--
+
+float 32 bits
+double 64
+long double 128
+numero 0 é especial = pois nao possui nenhum bit 1
++- infinito - int
++-nan = not a number
+complex = inclui ate numeros imaginarios
+ --extra--
+numeros racionais
+numeros irracionais
+numero imaginarios
